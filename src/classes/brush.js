@@ -1,6 +1,6 @@
 export class Brush {
     constructor(brushSize, brushColor) {
-        this._brushSize = brushSize || 4;
+        this._brushSize = brushSize || 1;
         this._brushColor = brushColor || 'white';
     }
 
