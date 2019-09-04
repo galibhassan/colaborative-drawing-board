@@ -8,7 +8,7 @@ export class Board {
         this._canvas.height  = height || parseInt(window.innerHeight);
         console.log(this._canvas.width, this._canvas.height)
         this._canvas.id = 'canvas';
-        document.body.appendChild(this._canvas);
+        document.getElementById('canvasContainer').appendChild(this._canvas);
 
         this._ctx = this._canvas.getContext('2d');
         this.setBackgroundColor(this._backgroundColor)

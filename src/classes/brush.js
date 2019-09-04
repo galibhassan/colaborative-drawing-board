@@ -36,4 +36,11 @@ export class Brush {
         ctx.arc(x,y, this.getBrushSize(), Math.PI*2);
         ctx.stroke();
     }
+
+    strokeWithImage(canvas, x, y) {
+        const imgScream = document.getElementById('imgScream');
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(imgScream, x, y, 20, 20)
+        
+    }
 }

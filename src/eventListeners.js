@@ -11,10 +11,15 @@ export const canvasEventListener = (myCanvas) => {
 
 canvasEventListener.respondToDrawingEvent = (myBrush, myCanvas)=> {
     myBrush.draw(myCanvas, window.previousCoordinate[0], window.previousCoordinate[1],
-        window.currentCoordinate[0], window.currentCoordinate[1])
-        // update
-        window.previousCoordinate[0] = window.currentCoordinate[0];
-        window.previousCoordinate[1] = window.currentCoordinate[1];
+            window.currentCoordinate[0], window.currentCoordinate[1]
+    );
+    
+    myBrush.strokeWithImage(myCanvas, window.currentCoordinate[0], window.currentCoordinate[1])
+    
+
+    // update
+    window.previousCoordinate[0] = window.currentCoordinate[0];
+    window.previousCoordinate[1] = window.currentCoordinate[1];
 
 }
 
